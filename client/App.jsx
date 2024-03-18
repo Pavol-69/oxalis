@@ -1,30 +1,35 @@
-import React from "react";
+// CSS
 import "./src/style/CSSGeneral.css"
 
-async function test(e) {
-  e.preventDefault();
-  try {
-    const response = await fetch("http://localhost:5000/test/test1", {
-      method: "GET",
-      headers: {
-        "content-type": "application/json",
-      },
-    });
+// Component
+import Accueil from "./src/component/Accueil"
+import CreationDossier from "./src/component/CreationDossier"
+import ExportExcel from "./src/component/ExportExcel"
 
-    const parseRes = await response.json();
-
-    console.log(parseRes);
-
-    } catch (err) {
-      console.error(err.message);
-  }
-}
+// Autre
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <div className="btn elm_ct" onClick={(e) => test(e)}>Bouton</div>
-    </div>
+    <React.StrictMode>
+      <Router>
+        <Routes>
+          <Route
+            path="/main_window"
+            element={<Accueil/>}
+          />
+          <Route
+            path="/creation_dossier"
+            element={<CreationDossier/>}
+          />
+          <Route
+            path="/export_excel"
+            element={<ExportExcel/>}
+          />
+        </Routes>
+      </Router>
+    </React.StrictMode>
   );
 }
 

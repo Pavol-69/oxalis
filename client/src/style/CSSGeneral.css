@@ -7,6 +7,9 @@ body {
   }
 
   .btn {
+    /*Position*/
+    margin: 10px;
+    
     /*Dimensions*/
     height: 50px;
     width: 100px;
@@ -31,4 +34,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .ligne {
+    flex-direction: row;
+  }
+
+  .colonne {
+    flex-direction: column;
   }

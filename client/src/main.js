@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const path = require('path');
+import * as fs from 'fs';
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS']=true
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -47,3 +49,15 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+app.whenReady().then(() => {
+  ipcMain.handle('dialog', (event, method, params) => {       
+    return dialog[method](params);
+  });
+
+  ipcMain.handle('create-folder', async (event, folderName) => {
+    if (!fs.existsSync(folderName)) {
+      fs.mkdirSync(folderName);
+    }
+    });
+});
+
