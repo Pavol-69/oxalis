@@ -27,4 +27,5 @@
  */
 
 import "./style/CSSGeneral.css";
+//import "./App.jsx";
 import "./index.js";

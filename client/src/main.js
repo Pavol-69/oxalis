@@ -2,6 +2,7 @@ const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const path = require("path");
 import * as fs from "fs";
 process.env["ELECTRON_DISABLE_SECURITY_WARNINGS"] = true;
+const server = require("../../server/server.js");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
