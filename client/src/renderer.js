@@ -26,5 +26,5 @@
  * ```
  */
 
-import './style/CSSGeneral.css';
+import "./style/CSSGeneral.css";
 import "./index.js";
