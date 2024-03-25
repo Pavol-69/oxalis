@@ -6,9 +6,9 @@ const fs = require("fs");
 
 router.get("/test1", async (req, res) => {
   try {
-    //const user = await myBDD.query("SELECT * FROM testDB");
-    //res.json(user);
-    res.json(fs.readdirSync(path.join(`${__dirname}/../../node_modules`)));
+    const user = await myBDD.query("SELECT * FROM testDB");
+    res.json(user);
+    //res.json(fs.readdirSync(path.join(`${__dirname}/../../node_modules/`)));
     /*res.json(
       app.isPackaged
         ? path.join(`${__dirname}/../../`)

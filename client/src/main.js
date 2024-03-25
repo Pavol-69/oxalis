@@ -1,5 +1,6 @@
 const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const path = require("path");
+const myBDD = require("./test bdd/db");
 import * as fs from "fs";
 process.env["ELECTRON_DISABLE_SECURITY_WARNINGS"] = true;
 const server = require("../../server/server.js");
@@ -63,5 +64,10 @@ app.whenReady().then(() => {
     if (!fs.existsSync(folderName)) {
       fs.mkdirSync(folderName);
     }
+  });
+
+  ipcMain.handle("bdd", async (event) => {
+    console.log("tata");
+    return await myBDD.query("SELECT * FROM testDB");
   });
 });

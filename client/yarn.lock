@@ -3080,6 +3080,11 @@ anymatch@^3.0.3, anymatch@~3.1.2:
   resolved "https://registry.npmjs.org/aproba/-/aproba-2.0.0.tgz"
   integrity sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==
 
+arch@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/arch/-/arch-2.2.0.tgz"
+  integrity sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==
+
 are-we-there-yet@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-3.0.1.tgz"
@@ -8076,6 +8081,14 @@ node-abi@^3.45.0:
   integrity sha512-fZjdhDOeRcaS+rcpve7XuwHBmktS1nS1gzgghwKUQQ8nTy2FdSDr6ZT8k6YhvlJeHmmQMYiT/IH9hfco5zeW2Q==
   dependencies:
     semver "^7.3.5"
+
+node-adodb@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npmjs.org/node-adodb/-/node-adodb-5.0.3.tgz"
+  integrity sha512-xQnoe7mx3b7B0QeW6visiQ2VxlX6rYaol20Ka5jZVKcetxOsXM4lsxfEZDmlOOoVJq/6BeoqPJHm3aZ4vjY+Bg==
+  dependencies:
+    arch "^2.1.1"
+    debug "^4.1.1"
 
 node-api-version@^0.2.0:
   version "0.2.0"
